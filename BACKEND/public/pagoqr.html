@@ -1,0 +1,16 @@
+<img src="qr.jpg" width="300">
+<button onclick="confirmarPago()">Ya pagué</button>
+
+<script>
+  function confirmarPago() {
+    const email = document.getElementById("usuario").value;
+    fetch("http://localhost:4001/api/v1/pagoqr", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        mensaje: "El cliente confirmó pago por QR",
+      })
+    });
+  }
+</script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Autenticación</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h1 class="auth-title">Bienvenido</h1>
+            <p class="auth-subtitle">Accede a tu cuenta</p>
+        </div>
+
+        <div class="alert" id="alert"></div>
+
+        <!-- Formulario de Login -->
+        <form class="auth-form active" id="loginForm">
+            <div class="form-group">
+                <label class="form-label" for="loginEmail">Email</label>
+                <input type="email" class="form-input" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="loginPassword">Contraseña</label>
+                <input type="password" class="form-input" id="loginPassword" required>
+            </div>
+            <button type="submit" class="auth-btn" id="loginBtn">
+                Iniciar Sesión
+            </button>
+            <div class="auth-links">
+                <a href="#" class="auth-link" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="auth-toggle">
+                <span>¿No tienes cuenta? </span>
+                <a href="#" class="auth-link" id="showRegister">Regístrate</a>
+            </div>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form class="auth-form" id="registerForm">
+            <div class="form-group">
+                <label class="form-label" for="registerEmail">Email</label>
+                <input type="email" class="form-input" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="registerPassword">Contraseña</label>
+                <input type="password" class="form-input" id="registerPassword" required>
+                <div class="password-strength">
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <span id="strengthText">Ingresa una contraseña</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="confirmPassword">Confirmar Contraseña</label>
+                <input type="password" class="form-input" id="confirmPassword" required>
+            </div>
+            <button type="submit" class="auth-btn" id="registerBtn">
+                Registrarse
+            </button>
+            <div class="auth-toggle">
+                <span>¿Ya tienes cuenta? </span>
+                <a href="#" class="auth-link" id="showLogin">Inicia sesión</a>
+            </div>
+        </form>
+
+        <!-- Formulario de Recuperación de Contraseña -->
+        <form class="auth-form" id="forgotForm">
+            <div class="form-group">
+                <label class="form-label" for="forgotEmail">Email</label>
+                <input type="email" class="form-input" id="forgotEmail" required>
+            </div>
+            <button type="submit" class="auth-btn" id="forgotBtn">
+                Enviar Enlace de Recuperación
+            </button>
+            <div class="auth-toggle">
+                <a href="#" class="auth-link" id="backToLogin">Volver al login</a>
+            </div>
+        </form>
+    </div>
+
+    <script> src="js/script.js"</script>
+</body>
+</html>
